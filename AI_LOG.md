@@ -4,7 +4,7 @@
 
 * ChatGPT – project planning, debugging, architecture guidance, and code assistance
 * Banani AI – UI/UX design inspiration, wireframing, and visual refinement
-* GitHub Copilot – code suggestions, refactoring, and productivity improvements
+* Antigravity – code generation, implementation assistance, and development workflow support
 
 ---
 
