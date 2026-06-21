@@ -37,7 +37,7 @@ MovieScope is a premium movie finder web application built using **Next.js 15 (A
 ## File Structure
 
 ```text
-moviescope/
+movie-finder-harini/
 │
 ├── app/
 │   ├── layout.js              # Server Layout with fonts & SEO metadata
@@ -74,7 +74,7 @@ moviescope/
 
 1. Navigate to the project directory:
    ```bash
-   cd moviescope
+   cd movie-finder-harini
    ```
 
 2. Install the dependencies:
