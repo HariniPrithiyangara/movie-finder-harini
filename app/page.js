@@ -18,6 +18,7 @@ export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalResults, setTotalResults] = useState(0);
   const [isOfflineMock, setIsOfflineMock] = useState(false);
+  const debounceRef = React.useRef(null);
 
   const fetchMoviesData = useCallback(async (search, page) => {
     setLoading(true);
@@ -53,6 +54,18 @@ export default function Home() {
     setCurrentPage(1);
   };
 
+  // Debounced live search — fires 400ms after user stops typing
+  const handleQueryChange = (newQuery) => {
+    setQuery(newQuery);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    if (newQuery.trim().length >= 2) {
+      debounceRef.current = setTimeout(() => {
+        setSearchTerm(newQuery.trim());
+        setCurrentPage(1);
+      }, 400);
+    }
+  };
+
   const totalPages = Math.ceil(totalResults / 12); // R1: exactly 12 results per page
 
   return (
@@ -85,7 +98,7 @@ export default function Home() {
         </div>
 
         {/* Search Bar Container */}
-        <SearchBar query={query} setQuery={setQuery} onSearch={handleSearchSubmit} />
+        <SearchBar query={query} setQuery={handleQueryChange} onSearch={handleSearchSubmit} />
 
         {/* Movies Grid Section */}
         <div className="mt-16 sm:mt-24">
