@@ -1,6 +1,6 @@
 # MovieScope 🎬
 
-MovieScope is a premium, production-ready movie finder web application built using **Next.js 15 (App Router)**, **React 19**, **Tailwind CSS**, and **Lucide React**. It integrates with the **OMDb API** to query movies and details, features a local-storage **favorites/watchlist manager**, supports **dark/light modes**, and implements a **client-side caching layer** to stay within the API's daily request limit.
+MovieScope is a premium movie finder web application built using **Next.js 15 (App Router)**, **React 19**, **Tailwind CSS**, and **Lucide React**. It integrates with the **OMDb API** to query movies and details, features a local-storage **favorites/watchlist manager**, supports **dark/light modes**, and implements a **client-side caching layer** to stay within the API's daily request limit.
 
 ## Features
 
